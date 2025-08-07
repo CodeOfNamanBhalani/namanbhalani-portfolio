@@ -9,7 +9,7 @@
                     {
                         name: 'Technology Job Simulation',
                         organization: 'Deloitte',
-                        image:"./img/14.Deloitte_page-0001.jpg",
+                        image:"img/14.Deloitte_page-0001.jpg",
                         description: 'Professional technology job simulation program focusing on real-world industry challenges and solutions.'
                     }
                 ]
@@ -21,25 +21,25 @@
                     {
                         name: 'Generative AI',
                         organization: 'LinkedIn Learning',
-                        image: './img/3.CertificateOfCompletion_Generative AI The Evolution of Thoughtful Online Search 20-4-25_page-0001.jpg',
+                        image: 'img/3.CertificateOfCompletion_Generative AI The Evolution of Thoughtful Online Search 20-4-25_page-0001.jpg',
                         description: 'Comprehensive course on Generative AI technologies and applications.'
                     },
                     {
                         name: 'Introduction to Generative AI',
                         organization: 'IBM Skill Build',
-                        image: './img/gen_ai_ibm.png',
+                        image: 'img/gen_ai_ibm.png',
                         description: 'Foundational course on Generative AI concepts and implementation.'
                     },
                     {
                         name: 'Machine Learning and Deep Learning',
                         organization: 'IBM Skill Build',
-                        image: './img/ml.png',
+                        image: 'img/ml.png',
                         description: 'Advanced machine learning and deep learning concepts and practical applications.'
                     },
                     {
                         name: 'Artificial Intelligence',
                         organization: 'IBM',
-                        image: './img/ai ibm.png',
+                        image: 'img/ai ibm.png',
                         description: 'Comprehensive AI course covering algorithms, applications, and ethical considerations.'
                     }
                 ]
@@ -52,31 +52,31 @@
                     {
                         name: 'Get Started with Android App Development',
                         organization: 'IBM',
-                        image: './img/androidibm.jpg',
+                        image: 'img/androidibm.jpg',
                         description: 'Comprehensive Android development course from basics to advanced concepts.'
                     },
                     {
                         name: 'Full Android Development Masterclass',
                         organization: 'Udemy',
-                        image: './img/androidudemy.png',
+                        image: 'img/androidudemy.png',
                         description: 'Complete Android development masterclass covering all aspects of mobile app development.'
                     },
                     {
                         name: 'Python Complete Course',
                         organization: 'Udemy',
-                        image: './img/pythonudemy.jpg',
+                        image: 'img/pythonudemy.jpg',
                         description: 'Comprehensive Python programming course from beginner to advanced level.'
                     },
                     {
                         name: 'Flutter Development',
                         organization: 'Google Cloud',
-                        image: './img/flutteribm.jpg',
+                        image: 'img/flutteribm.jpg',
                         description: 'Professional Flutter development course for cross-platform mobile applications.'
                     },
                      {
                         name: 'HTML/CSS',
                         organization: 'OpenWaever',
-                        image: './img/html_css.png',
+                        image: 'img/html_css.png',
                         description: 'Comprehensive course on building responsive websites using HTML and CSS from scratch.'
                     }
 
@@ -89,7 +89,7 @@
                     {
                         name: 'Google Cloud Arcade Facilitator Program',
                         organization: 'Google Cloud',
-                        image: './img/arcade.png',
+                        image: 'img/arcade.png',
                         description: 'Participant in Google Cloud Arcade Facilitator Program, gaining hands-on cloud experience.'
                     },
                     {
@@ -107,19 +107,19 @@
                     {
                         name: 'Full Stack Developer Certificate',
                         organization: 'WhiteSton Info Tech',
-                        image: './img/whiteStone.jpg',
+                        image: 'img/whiteStone.jpg',
                         description: '15-day intensive full-stack development internship certificate.'
                     },
                     {
                         name: 'Flutter Developer Certificate',
                         organization: 'Quicksend',
-                        image: './img/internship certificate flutter oflline.jpg',
+                        image: 'img/internship certificate flutter oflline.jpg',
                         description: '15-day Flutter development internship completion certificate.'
                     },
                     {
                         name: 'AI/ML Internship Certificate',
                         organization: 'IBM (via Edunet Foundation)',
-                        image: './img/aicte.jpg',
+                        image: 'img/aicte.jpg',
                         description: '1-month AI/ML internship completion certificate and training materials.'
                     },
                     {
