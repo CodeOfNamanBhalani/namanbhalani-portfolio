@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naman Bhalani - App Developer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Naman Bhalani</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fas fa-bars text-light"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Floating Resume Button -->
+    <button class="floating-resume" onclick=downloadResume()>
+        <i class="fas fa-download me-2"></i>Resume
+    </button>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7 hero-content">
+                    <h1 class="hero-title" data-aos="fade-up">Bhalani Naman Sureshbhai</h1>
+                    <h2 class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">App Developer & CS Student</h2>
+                    <p class="hero-description" data-aos="fade-up" data-aos-delay="200">
+                        Passionate Android and cross-platform app developer skilled in Java and Flutter. 
+                        Building impactful apps that solve everyday problems with clean UI/UX and efficient code.
+                    </p>
+                    <div class="achievement-badge" data-aos="fade-up" data-aos-delay="300">
+                        🏆 Ranked 1st in First Semester
+                    </div>
+                    <div class="achievement-badge" data-aos="fade-up" data-aos-delay="400">
+                        📊 Current CGPA: 8.5
+                    </div>
+                    <br><br>
+                    <div data-aos="fade-up" data-aos-delay="500">
+                        <a href="#projects" class="btn btn-primary me-3">View Projects</a>
+                        <a href="#contact" class="btn btn-outline-primary">Get in Touch</a>
+                    </div>
+                </div>
+                <div class="col-lg-5 hero-photo">
+                    <div class="photo-container" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="photo-glow"></div>
+                        <div class="photo-frame">
+                            <!-- Replace the content below with: <img src="your-photo.jpg" alt="Naman Bhalani" class="profile-image"> -->
+                            <img src="/img/naman_bhalani.jpg" alt="Naman Bhalani" class="profile-image">
+                        </div>
+                        <div class="photo-decoration decoration-1"></div>
+                        <div class="photo-decoration decoration-2"></div>
+                        <div class="photo-decoration decoration-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="floating-element">
+            <i class="fab fa-android text-success" style="font-size: 3rem; opacity: 0.3;"></i>
+        </div>
+        <div class="floating-element">
+            <i class="fab fa-java text-warning" style="font-size: 2.5rem; opacity: 0.3;"></i>
+        </div>
+        <div class="floating-element">
+            <i class="fas fa-mobile-alt text-info" style="font-size: 2.8rem; opacity: 0.3;"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">About Me</h2>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="custom-card" data-aos="fade-up" data-aos-delay="100">
+                        <p class="fs-5 text-center mb-4">
+                            I am a 5th-semester B.Tech Computer Science Engineering student with a strong foundation in Data Structures and Algorithms. 
+                            Passionate about building efficient, real-world software solutions that make a difference.
+                        </p>
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                                <h5 class="text-primary mb-3">🎯 Current Focus</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i>Software Developer Intern Role</li>
+                                    <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i>Mobile App Development</li>
+                                    <li class="mb-2"><i class="fas fa-chevron-right text-primary me-2"></i>Problem Solving & DSA</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h5 class="text-primary mb-3">📍 Personal Info</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-map-marker-alt text-primary me-2"></i>Bhavnagar, Gujarat</li>
+                                    <li class="mb-2"><i class="fas fa-graduation-cap text-primary me-2"></i>B.Tech CSE (5th Semester)</li>
+                                    <li class="mb-2"><i class="fas fa-trophy text-primary me-2"></i>CGPA: 8.5</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Projects</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="mb-3">
+                            <i class="fas fa-wallet text-success fs-2 mb-3"></i>
+                            <h4>📱 Expense Control App</h4>
+                        </div>
+                        <p class="text-white">A smart mobile application to track daily expenses and manage monthly budgets effectively with intuitive UI/UX design.</p>
+                        <div class="mt-3">
+                            <span class="skill-badge">Flutter</span>
+                            <span class="skill-badge">Dart</span>
+                            <span class="skill-badge">SQLite</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="mb-3">
+                            <i class="fas fa-heartbeat text-danger fs-2 mb-3"></i>
+                            <h4>🏥 Health Card Web App</h4>
+                        </div>
+                        <p class="text-white">A digital health record system to securely store and access personal health information with modern web technologies.</p>
+                        <div class="mt-3">
+                            <span class="skill-badge">HTML</span>
+                            <span class="skill-badge">CSS</span>
+                            <span class="skill-badge">JavaScript</span>
+                            <span class="skill-badge">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="mb-3">
+                            <i class="fas fa-globe text-info fs-2 mb-3"></i>
+                            <h4>🌐 Flutter Apps & Websites</h4>
+                        </div>
+                        <p class="text-white">Developed multiple cross-platform applications and responsive websites using Flutter framework and modern web technologies.</p>
+                        <div class="mt-3">
+                            <span class="skill-badge">Flutter</span>
+                            <span class="skill-badge">HTML</span>
+                            <span class="skill-badge">CSS</span>
+                            <span class="skill-badge">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="mb-3">
+                            <i class="fas fa-music text-purple fs-2 mb-3"></i>
+                            <h4>🎵 iSangit Android App</h4>
+                        </div>
+                        <p class="text-white">A music-based Android application with interactive interface and engaging features built using native Android development.</p>
+                        <div class="mt-3">
+                            <span class="skill-badge">Java</span>
+                            <span class="skill-badge">Android Studio</span>
+                            <span class="skill-badge">XML</span>
+                            <span class="skill-badge">SQLite</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">🛠 Skills & Technologies</h2>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="custom-card text-center" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-code text-primary fs-1 mb-3"></i>
+                        <h5>Programming Languages</h5>
+                        <div class="mt-3">
+                            <span class="skill-badge">Java</span>
+                            <span class="skill-badge">Python</span>
+                            <span class="skill-badge">Dart</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <div class="custom-card text-center" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-mobile-alt text-success fs-1 mb-3"></i>
+                        <h5>Mobile Development</h5>
+                        <div class="mt-3">
+                            <span class="skill-badge">Flutter</span>
+                            <span class="skill-badge">Android Studio</span>
+                            <span class="skill-badge">Native Android</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <div class="custom-card text-center" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-globe text-info fs-1 mb-3"></i>
+                        <h5>Web Development</h5>
+                        <div class="mt-3">
+                            <span class="skill-badge">HTML</span>
+                            <span class="skill-badge">CSS</span>
+                            <span class="skill-badge">JavaScript</span>
+                            <span class="skill-badge">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="custom-card text-center" data-aos="fade-up" data-aos-delay="400">
+                        <i class="fas fa-brain text-warning fs-1 mb-3"></i>
+                        <h5>Core Concepts</h5>
+                        <div class="mt-3">
+                            <span class="skill-badge">Data Structures</span>
+                            <span class="skill-badge">Algorithms</span>
+                            <span class="skill-badge">OOP</span>
+                            <span class="skill-badge">Problem Solving</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="custom-card text-center" data-aos="fade-up" data-aos-delay="500">
+                        <i class="fas fa-tools text-secondary fs-1 mb-3"></i>
+                        <h5>Tools & Platforms</h5>
+                        <div class="mt-3">
+                            <span class="skill-badge">Git & GitHub</span>
+                            <span class="skill-badge">VS Code</span>
+                            <span class="skill-badge">Firebase</span>
+                            <span class="skill-badge">SQLite</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h5 class="text-primary">Full Stack Developer</h5>
+                        <h6 class="text-white">WhiteSton Info Tech</h6>
+                        <p class="mb-2"><i class="fas fa-calendar text-primary me-2"></i>June 1-15, 2024 (15 Days) - Offline</p>
+                        <p>Worked on full-stack web development projects using HTML, CSS, and JavaScript. Gained hands-on experience in creating responsive web applications.</p>
+                        <div class="mt-2">
+                            <span class="skill-badge">HTML</span>
+                            <span class="skill-badge">CSS</span>
+                            <span class="skill-badge">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h5 class="text-primary">Flutter Developer</h5>
+                        <h6 class="text-white">Quicksend</h6>
+                        <p class="mb-2"><i class="fas fa-calendar text-primary me-2"></i>June 2-20, 2024 (15 Days) - Offline</p>
+                        <p>Developed cross-platform mobile applications using Flutter framework. Enhanced skills in Dart programming and mobile UI/UX design.</p>
+                        <div class="mt-2">
+                            <span class="skill-badge">Flutter</span>
+                            <span class="skill-badge">Dart</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h5 class="text-primary">AI/ML Internship</h5>
+                        <h6 class="text-white">IBM (via Edunet Foundation)</h6>
+                        <p class="mb-2"><i class="fas fa-calendar text-primary me-2"></i>June 1-30, 2025 (1 Month) - Online</p>
+                        <p>Explored artificial intelligence and machine learning concepts. Gained knowledge in AI algorithms and practical implementation techniques.</p>
+                        <div class="mt-2">
+                            <span class="skill-badge">AI</span>
+                            <span class="skill-badge">ML</span>
+                            <span class="skill-badge">Python</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h5 class="text-primary">Java Developer</h5>
+                        <h6 class="text-white">ValueOfCodes</h6>
+                        <p class="mb-2"><i class="fas fa-calendar text-primary me-2"></i>June 1-30, 2025 (1 Month) - Online</p>
+                        <p>Focused on Core Java development and object-oriented programming principles. Strengthened foundation in Java programming and software development practices.</p>
+                        <div class="mt-2">
+                            <span class="skill-badge">Core Java</span>
+                            <span class="skill-badge">OOP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">🏆 Certificates & Achievements</h2>
+            
+            <!-- Filter Buttons -->
+            <div class="filter-buttons text-center" data-aos="fade-up" data-aos-delay="100">
+                <button class="filter-btn active" data-filter="all">All Certificates</button>
+                <button class="filter-btn" data-filter="technology">Technology</button>
+                <button class="filter-btn" data-filter="ai-ml">AI/ML</button>
+                <button class="filter-btn" data-filter="development">Development</button>
+                <button class="filter-btn" data-filter="cloud">Cloud & Data</button>
+            </div>
+            
+            <div class="row">
+                <!-- Technology & Job Simulation -->
+                <div class="col-lg-4 col-md-6 mb-4 certificate-filter technology" data-aos="fade-up" data-aos-delay="100">
+                    <div class="certificate-card" onclick="openCertificateModal('technology')">
+                        <div class="certificate-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="certificate-category">Technology</div>
+                        <h5>Professional Simulations</h5>
+                        <p class="text-white">Industry job simulations and professional training programs</p>
+                        <small class="text-primary">Click to view details</small>
+                    </div>
+                </div>
+                
+                <!-- AI/ML Certificates -->
+                <div class="col-lg-4 col-md-6 mb-4 certificate-filter ai-ml" data-aos="fade-up" data-aos-delay="200">
+                    <div class="certificate-card" onclick="openCertificateModal('ai-ml')">
+                        <div class="certificate-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="certificate-category">AI/ML</div>
+                        <h5>Artificial Intelligence & ML</h5>
+                        <p class="text-white">Machine Learning, Deep Learning, and Generative AI certifications</p>
+                        <small class="text-primary">Click to view details</small>
+                    </div>
+                </div>
+                
+                <!-- Development Certificates -->
+                <div class="col-lg-4 col-md-6 mb-4 certificate-filter development" data-aos="fade-up" data-aos-delay="300">
+                    <div class="certificate-card" onclick="openCertificateModal('development')">
+                        <div class="certificate-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="certificate-category">Development</div>
+                        <h5>Software Development</h5>
+                        <p class="text-white">Android, Flutter, Python,Html and Full-stack development courses</p>
+                        <small class="text-primary">Click to view details</small>
+                    </div>
+                </div>
+                
+                <!-- Cloud & Data -->
+                <div class="col-lg-4 col-md-6 mb-4 certificate-filter cloud" data-aos="fade-up" data-aos-delay="400">
+                    <div class="certificate-card" onclick="openCertificateModal('cloud')">
+                        <div class="certificate-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <div class="certificate-category">Cloud & Data</div>
+                        <h5>Cloud & Data Analytics</h5>
+                        <p class="text-white">Google Cloud, Data Visualization, and Analytics certifications</p>
+                        <small class="text-primary">Click to view details</small>
+                    </div>
+                </div>
+                
+                <!-- Industry Training -->
+                <div class="col-lg-4 col-md-6 mb-4 certificate-filter technology" data-aos="fade-up" data-aos-delay="500">
+                    <div class="certificate-card" onclick="openCertificateModal('industry')">
+                        <div class="certificate-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <div class="certificate-category">Industry Training</div>
+                        <h5>Internship Certificates</h5>
+                        <p class="text-white">Industry training certificates and internship offer letters</p>
+                        <small class="text-primary">Click to view details</small>
+                    </div>
+                </div>
+                
+                <!-- All Certificates Summary -->
+                <div class="col-lg-4 col-md-6 mb-4 certificate-filter all" data-aos="fade-up" data-aos-delay="600">
+                    <div class="certificate-card" data-bs-toggle="modal" data-bs-target="#allCertificatesModal">
+                        <div class="certificate-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <div class="certificate-category">Complete List</div>
+                        <h5>All Achievements</h5>
+                        <p class="text-white">View complete list of all certificates and achievements</p>
+                        <small class="text-primary">Click to view all</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificate Image Modal -->
+    <div class="modal fade certificate-modal" id="certificateImageModal" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="certificateModalTitle">
+                        <i class="fas fa-certificate me-2"></i>Certificate Details
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="certificateModalBody">
+                    <!-- Certificate content will be dynamically loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Individual Certificate Viewer Modal -->
+    <div class="modal fade" id="singleCertificateModal" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="singleCertificateTitle">Certificate</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="singleCertificateImage" class="certificate-image-viewer" alt="Certificate">
+                    <p id="singleCertificateDescription" class="mt-3 text-white"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="allCertificatesModal" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><i class="fas fa-medal me-2"></i>All Certificates & Achievements</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6 class="text-primary mb-3">🎯 Technology & Professional</h6>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-certificate text-warning me-2"></i>Technology Job Simulation – Deloitte</li>
+                                <li class="mb-2"><i class="fas fa-certificate text-warning me-2"></i>Introduction to Software Engineering – IBM</li>
+                            </ul>
+                            
+                            <h6 class="text-primary mb-3 mt-4">🤖 Artificial Intelligence & ML</h6>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-certificate text-warning me-2"></i>Generative AI – LinkedIn Learning</li>
+                                <li class="mb-2"><i class="fas fa-certificate text-warning me-2"></i>Introduction to Generative AI – IBM Skill Build</li>
+                                <li class="mb-2"><i class="fas fa-certificate text-warning me-2"></i>Machine Learning and Deep Learning – IBM Skill Build</li>
+                                <li class="mb-2"><i class="fas fa-certificate text-warning me-2"></i>Artificial Intelligence – IBM</li>
+                            </ul>
+                            
+                            <h6 class="text-primary mb-3 mt-4">☁️ Cloud & Data</h6>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-certificate text-warning me-2"></i>Google Cloud Arcade Facilitator Program – Participant</li>
+                                <li class="mb-2"><i class="fas fa-certificate text-warning me-2"></i>Data Visualisation: Empowering Business with Effective Insights – Tata</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6 class="text-primary mb-3">💻 Development</h6>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-certificate text-warning me-2"></i>Get Started with Android App Development – IBM</li>
+                                <li class="mb-2"><i class="fas fa-certificate text-warning me-2"></i>Full Android Development Masterclass – Udemy</li>
+                                <li class="mb-2"><i class="fas fa-certificate text-warning me-2"></i>Python Complete Course – Udemy</li>
+                                <li class="mb-2"><i class="fas fa-certificate text-warning me-2"></i>Flutter Development – Google Cloud</li>
+                                <li class="mb-2"><i class="fas fa-certificate text-warning me-2"></i>HTML/CSS – Openweaver</li>
+                            </ul>
+                            
+                            <h6 class="text-primary mb-3 mt-4">🏭 Industry Training</h6>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-award text-success me-2"></i>Full Stack Developer – WhiteSton Info Tech</li>
+                                <li class="mb-2"><i class="fas fa-award text-success me-2"></i>Flutter Developer – Quicksend</li>
+                                <li class="mb-2"><i class="fas fa-award text-success me-2"></i>AI/ML Internship – IBM (Edunet Foundation)</li>
+                                <li class="mb-2"><i class="fas fa-award text-success me-2"></i>Java Developer – ValueOfCodes</li>
+                                <li class="mb-2"><i class="fas fa-file-contract text-info me-2"></i>Internship Offer Letters (All Organizations)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <div class="achievement-badge">12+ Professional Certificates</div>
+                        <div class="achievement-badge">4 Industry Internships</div>
+                        <div class="achievement-badge">Multiple Platforms</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="custom-card" data-aos="fade-up" data-aos-delay="100">
+                        <p class="text-center fs-5 mb-4">
+                            I'm currently seeking a <strong class="text-primary">Software Developer Intern</strong> role where I can apply my technical skills, 
+                            grow as a developer, and contribute meaningfully to innovative teams.
+                        </p>
+                        
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="contact-item" data-aos="fade-right" data-aos-delay="200">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-1">Phone</h6>
+                                        <a href="tel:+919913717671" class="text-decoration-none text-light">+91 99137 17671</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3">
+                                <div class="contact-item" data-aos="fade-left" data-aos-delay="200">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-1">Email</h6>
+                                        <a href="mailto:namanbhalani05@gmail.com" class="text-decoration-none text-light">namanbhalani05@gmail.com</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3">
+                                <div class="contact-item" data-aos="fade-right" data-aos-delay="300">
+                                    <div class="contact-icon">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-1">GitHub</h6>
+                                        <a href="https://github.com/CodeOfNamanBhalani" target="_blank" class="text-decoration-none text-light">CodeOfNamanBhalani</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6 mb-3">
+                                <div class="contact-item" data-aos="fade-left" data-aos-delay="300">
+                                    <div class="contact-icon">
+                                        <i class="fab fa-linkedin"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-1">LinkedIn</h6>
+                                        <a href="https://www.linkedin.com/in/naman-bhalani-768274304" target="_blank" class="text-decoration-none text-light">naman-bhalani</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12 mb-3">
+                                <div class="contact-item" data-aos="fade-up" data-aos-delay="400">
+                                    <div class="contact-icon">
+                                        <i class="fas fa-portfolio"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-1">Codolio Portfolio</h6>
+                                        <a href="https://codolio.com/profile/namanbhalani" target="_blank" class="text-decoration-none text-light">codolio.com/profile/namanbhalani</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center mt-4" data-aos="fade-up" data-aos-delay="500">
+                            <h5 class="text-primary mb-3">Let's Connect!</h5>
+                            <p class="text-white">From Bhavnagar, Gujarat - Bringing local grit with a global vision</p>
+                            <div class="social-links mt-3">
+                                <a href="https://github.com/CodeOfNamanBhalani" target="_blank" class="btn btn-outline-primary me-3">
+                                    <i class="fab fa-github me-2"></i>GitHub
+                                </a>
+                                <a href="https://www.linkedin.com/in/naman-bhalani-768274304" target="_blank" class="btn btn-outline-primary me-3">
+                                    <i class="fab fa-linkedin me-2"></i>LinkedIn
+                                </a>
+                                <a href="mailto:namanbhalani05@gmail.com" class="btn btn-primary">
+                                    <i class="fas fa-envelope me-2"></i>Send Email
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-4" style="background: var(--darker-bg); border-top: 1px solid rgba(99, 102, 241, 0.2);">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <p class="text-white mb-2">
+                        &copy; 2025 Bhalani Naman Sureshbhai. Made with 💜 and lots of ☕
+                    </p>
+                    <p class="text-white small">
+                        🏆 Rank #1 Student | 📊 CGPA: 8.5 | 🚀 Future Software Developer
+                    </p>
+                    <div class="mt-3">
+                        <span class="achievement-badge">Available for Internship</span>
+                        <span class="achievement-badge">Open to Opportunities</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
