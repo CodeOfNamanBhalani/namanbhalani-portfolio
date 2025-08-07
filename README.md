@@ -23,4 +23,4 @@ This is the official personal portfolio website of **Bhalani Naman Sureshbhai**,
 - GitHub: [github.com/codeofnamanbhalani](https://github.com/codeofnamanbhalani)
 - Email:[ Email: namanbhalani05@gmail.com](https://namanbhalani05@gmail.com)
   
-##Made with 💜 and lots of ☕ by Naman Bhalani  
+## Made with 💜 and lots of ☕ by Naman Bhalani  
