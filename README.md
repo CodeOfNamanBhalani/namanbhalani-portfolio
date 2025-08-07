@@ -16,11 +16,11 @@ This is the official personal portfolio website of **Bhalani Naman Sureshbhai**,
 - GitHub Pages for deployment
 
 ## 🔗 Live Website
-[View Portfolio Website](https://codeofnamanbhalani.github.io/portfolio-by-naman)
+[View Portfolio Website](https://codeofnamanbhalani.github.io/namanbhalani-portfolio)
 
 ## 📫 Connect with Me
 - LinkedIn: [linkedin.com/in/namanbhalani](https://www.linkedin.com/in/naman-bhalani-768274304)
 - GitHub: [github.com/codeofnamanbhalani](https://github.com/codeofnamanbhalani)
-- Email:[ Email: namanbhalani05@gmail.com](https://namanbhalani05@gmail.com)
+- Email:[namanbhalani05@gmail.com](https://namanbhalani05@gmail.com)
   
 ## Made with 💜 and lots of ☕ by Naman Bhalani  
