@@ -71,6 +71,7 @@ body {
     background: linear-gradient(135deg, var(--dark-bg) 0%, var(--darker-bg) 100%);
     position: relative;
     overflow: hidden;
+    padding: 80px 0;
 }
 
 .hero-section::before {
@@ -192,6 +193,33 @@ body {
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    word-wrap: break-word; /* Add this */
+    overflow-wrap: break-word; /* Add this */
+    hyphens: auto; /* Add this */
+}
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 2.5rem; /* Reduced from 2.8rem */
+        line-height: 1.2; /* Add this */
+        word-break: break-word; /* Add this */
+    }
+    
+    .photo-container {
+        width: 280px;
+        height: 280px;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-section {
+        text-align: center;
+        padding: 80px 0; /* Add this */
+    }
+    
+    /* Fix contact section alignment */
+    .contact-item {
+        justify-content: flex-start; /* Add this */
+        text-align: left; /* Add this */
+    }
 }
 
 .hero-subtitle {
@@ -757,34 +785,150 @@ body {
     .timeline-dot {
         left: 20px;
     }
-}
-
-@media (max-width: 576px) {
-    .hero-title {
-        font-size: 2rem;
+     .hero-title {
+        font-size: 2rem; /* Reduced from 2.3rem */
+        line-height: 1.3; /* Add this */
+        margin-bottom: 1rem; /* Add this */
+        padding: 0 15px; /* Add this */
     }
     
     .hero-subtitle {
-        font-size: 1.2rem;
+        font-size: 1.2rem; /* Reduced from 1.3rem */
+        line-height: 1.4; /* Add this */
+        padding: 0 15px; /* Add this */
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+        padding: 0 15px; /* Add this */
+        line-height: 1.6; /* Add this */
     }
     
     .photo-container {
-        width: 200px;
-        height: 200px;
+        width: 220px; /* Reduced from 250px */
+        height: 220px; /* Reduced from 250px */
+        margin-bottom: 2rem;
     }
     
+    /* Fix container padding */
+    .container {
+        padding-left: 15px; /* Add this */
+        padding-right: 15px; /* Add this */
+    }
+    
+    /* Fix contact section */
+    .contact-item {
+        padding: 0.8rem; /* Reduced padding */
+        margin: 0.5rem 0; /* Reduced margin */
+        flex-direction: row; /* Ensure horizontal layout */
+        align-items: center; /* Center align items */
+    }
+    
+    .contact-icon {
+        width: 40px; /* Reduced from 50px */
+        height: 40px; /* Reduced from 50px */
+        margin-right: 0.8rem; /* Reduced margin */
+        font-size: 1rem; /* Reduced font size */
+    }
+    
+    /* Fix buttons */
     .btn-primary, .btn-outline-primary {
-        padding: 10px 25px;
+        padding: 10px 20px; /* Reduced padding */
         font-size: 0.9rem;
+        margin: 5px; /* Add margin between buttons */
     }
     
+    /* Fix floating resume button */
+    .floating-resume {
+        bottom: 20px; /* Reduced from 30px */
+        right: 20px; /* Reduced from 30px */
+        padding: 12px 20px; /* Reduced padding */
+        font-size: 0.9rem; /* Add this */
+    }
+}
+
+@media (max-width: 576px) {
+     .hero-title {
+        font-size: 1.8rem; /* Reduced from 2rem */
+        line-height: 1.2;
+        padding: 0 10px;
+        margin-bottom: 0.8rem;
+    }
+    
+     .hero-subtitle {
+        font-size: 1.1rem; /* Reduced from 1.2rem */
+        padding: 0 10px;
+        margin-bottom: 1.5rem;
+    }
+    .hero-description {
+        padding: 0 10px;
+        margin-bottom: 2rem;
+    }
+    
+     .photo-container {
+        width: 180px; /* Reduced from 200px */
+        height: 180px; /* Reduced from 200px */
+    }
+     .profile-image {
+        font-size: 2rem; /* Reduced from 2.5rem */
+    }
+    .btn-primary, .btn-outline-primary {
+        padding: 8px 16px; /* Further reduced */
+        font-size: 0.85rem; /* Reduced font size */
+        display: block; /* Stack buttons vertically */
+        width: 100%; /* Full width */
+        margin: 8px auto; /* Center with margin */
+        max-width: 200px; /* Limit max width */
+    }
+    .hero-content div:last-child {
+        text-align: center; /* Center buttons */
+    }
     .achievement-badge {
         padding: 8px 16px;
         font-size: 0.9rem;
         margin: 5px 2px;
     }
-    
+    .contact-item {
+        padding: 0.6rem;
+        margin: 0.3rem 0;
+    }
+    .contact-icon {
+        width: 35px;
+        height: 35px;
+        margin-right: 0.6rem;
+        font-size: 0.9rem;
+    }
+      .achievement-badge {
+        padding: 6px 12px; /* Reduced padding */
+        font-size: 0.8rem; /* Reduced font size */
+        margin: 3px 2px; /* Reduced margin */
+        display: inline-block;
+    }
+    .section {
+        padding: 60px 0; /* Reduced from 100px */
+    }
     .profile-image {
         font-size: 2.5rem;
     }
+    .hero-section {
+        padding: 60px 0; /* Reduced padding */
+        min-height: 90vh; /* Reduced from 100vh */
+    }
+}
+
+.hero-content h1,
+.hero-content h2,
+.hero-content p {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+}
+
+.contact-item h6 {
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+}
+.contact-item a {
+    font-size: 0.9rem;
+    word-break: break-all; /* This will break long URLs/emails */
 }
