@@ -846,6 +846,9 @@ body {
         font-size: 0.9rem; /* Add this */
     }
 }
+.bg{
+    background-color: #000;
+}
 
 @media (max-width: 576px) {
      .hero-title {
@@ -931,4 +934,12 @@ body {
 .contact-item a {
     font-size: 0.9rem;
     word-break: break-all; /* This will break long URLs/emails */
+}
+
+html, body {
+  overflow-x: hidden;
+}
+img, table{
+  max-width: 100%;
+  height: auto;
 }
