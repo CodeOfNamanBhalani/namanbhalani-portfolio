@@ -52,7 +52,7 @@ export default function ContactPage() {
           <a
             href={siteConfig.resumePath}
             download
-            className="inline-block rounded-full border border-white/15 px-6 py-3 text-sm font-medium hover:bg-white/5"
+            className="inline-block rounded-full border border-foreground/15 px-6 py-3 text-sm font-medium transition-colors hover:bg-foreground/5"
           >
             Download resume (PDF)
           </a>

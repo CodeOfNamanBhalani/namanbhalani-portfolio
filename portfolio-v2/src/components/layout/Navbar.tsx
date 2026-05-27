@@ -5,6 +5,7 @@ import { Menu, X, Sun, Moon, Download } from "lucide-react";
 import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/lib/site";
+import { ClientOnly } from "@/components/shared/ClientOnly";
 
 const navLinks = [
   { href: "#hero", label: "Home" },
@@ -21,9 +22,6 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
   const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => setMounted(true), []);
 
   useEffect(() => {
     let ticking = false;
@@ -64,7 +62,7 @@ export function Navbar() {
       className={cn(
         "fixed inset-x-0 top-0 z-50 border-b transition-colors",
         scrolled
-          ? "border-white/10 bg-background/95 backdrop-blur-sm"
+          ? "border-foreground/10 bg-background/95 backdrop-blur-sm"
           : "border-transparent bg-transparent",
       )}
     >
@@ -73,7 +71,7 @@ export function Navbar() {
           onClick={() => handleNav("#hero")}
           className="flex items-center gap-2 font-semibold tracking-tight"
         >
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/20 bg-foreground text-sm font-bold text-background">
+          <span className="flex h-9 w-9 items-center justify-center rounded-lg border border-foreground/20 bg-foreground text-sm font-bold text-background">
             NB
           </span>
           <span className="hidden sm:inline">{siteConfig.name}</span>
@@ -88,11 +86,12 @@ export function Navbar() {
                 <button
                   onClick={() => handleNav(link.href)}
                   className={cn(
-                    "rounded-full px-3 py-2 text-sm",
+                    "rounded-full px-3 py-2 text-sm transition-colors",
                     active
-                      ? "bg-white/10 text-foreground"
-                      : "text-muted hover:text-foreground",
+                      ? "bg-foreground/10 text-foreground"
+                      : "text-muted hover:bg-foreground/5 hover:text-foreground",
                   )}
+                  aria-current={active ? "location" : undefined}
                 >
                   {link.label}
                 </button>
@@ -102,16 +101,16 @@ export function Navbar() {
         </ul>
 
         <div className="flex items-center gap-2">
-          {mounted && (
+          <ClientOnly>
             <button
               type="button"
               aria-label="Toggle theme"
-              className="rounded-full border border-white/10 p-2 text-muted hover:text-foreground"
+              className="rounded-full border border-foreground/10 p-2 text-muted transition-colors hover:border-foreground/20 hover:text-foreground"
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
             >
               {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
             </button>
-          )}
+          </ClientOnly>
           <a
             href={siteConfig.resumePath}
             download
@@ -122,9 +121,11 @@ export function Navbar() {
           </a>
           <button
             type="button"
-            className="rounded-full border border-white/10 p-2 lg:hidden"
+            className="rounded-full border border-foreground/10 p-2 transition-colors hover:border-foreground/20 lg:hidden"
             onClick={() => setOpen(!open)}
             aria-label="Menu"
+            aria-expanded={open}
+            aria-controls="mobile-nav"
           >
             {open ? <X size={20} /> : <Menu size={20} />}
           </button>
@@ -132,18 +133,32 @@ export function Navbar() {
       </nav>
 
       {open && (
-        <div className="border-t border-white/10 bg-background px-6 py-4 lg:hidden">
+        <div
+          id="mobile-nav"
+          className="border-t border-foreground/10 bg-background px-6 py-4 lg:hidden"
+        >
           <ul className="flex flex-col gap-2">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <button
-                  onClick={() => handleNav(link.href)}
-                  className="block w-full rounded-lg px-3 py-2 text-left text-sm hover:bg-white/5"
-                >
-                  {link.label}
-                </button>
-              </li>
-            ))}
+            {navLinks.map((link) => {
+              const id = link.href.replace("#", "");
+              const active = activeSection === id;
+
+              return (
+                <li key={link.href}>
+                  <button
+                    onClick={() => handleNav(link.href)}
+                    className={cn(
+                      "block w-full rounded-lg px-3 py-2 text-left text-sm transition-colors",
+                      active
+                        ? "bg-foreground/10 text-foreground"
+                        : "text-muted hover:bg-foreground/5 hover:text-foreground",
+                    )}
+                    aria-current={active ? "location" : undefined}
+                  >
+                    {link.label}
+                  </button>
+                </li>
+              );
+            })}
             <li>
               <a
                 href={siteConfig.resumePath}

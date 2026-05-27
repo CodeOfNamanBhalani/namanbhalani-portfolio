@@ -34,7 +34,7 @@ export function CertificatesSection() {
             key={cert.id}
             type="button"
             onClick={() => setSelected(cert)}
-            className="group hero-stat-card relative text-left transition hover:border-white/20"
+            className="group hero-stat-card relative text-left transition-colors hover:border-foreground/20"
           >
             {cert.type === "image" && (
               <CardHoverPreview
@@ -80,7 +80,7 @@ export function CertificatesSection() {
             <X size={20} />
           </button>
           <div
-            className="max-h-[92vh] w-full max-w-4xl overflow-hidden rounded-2xl border border-white/10 bg-background p-4"
+            className="max-h-[92vh] w-full max-w-4xl overflow-hidden rounded-2xl border border-foreground/10 bg-background p-4"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="mb-3 pr-8">

@@ -19,7 +19,7 @@ export function FeaturedWork() {
           <Link
             key={project.slug}
             href={`/work/${project.slug}/`}
-            className="block overflow-hidden rounded-2xl border border-white/10 bg-card"
+            className="group block overflow-hidden rounded-2xl border border-foreground/10 bg-card transition-transform transition-colors hover:-translate-y-0.5 hover:border-foreground/20"
           >
             <div className="relative aspect-video">
               <Image
@@ -37,7 +37,7 @@ export function FeaturedWork() {
               <p className="mt-2 line-clamp-2 text-sm text-muted">
                 {project.shortDescription}
               </p>
-              <span className="mt-4 inline-flex items-center gap-1 text-sm text-muted">
+              <span className="mt-4 inline-flex items-center gap-1 text-sm text-muted transition-colors group-hover:text-foreground">
                 Case study <ArrowRight size={14} />
               </span>
             </div>
@@ -47,7 +47,7 @@ export function FeaturedWork() {
       <div className="mt-10 text-center">
         <Link
           href="/work/"
-          className="inline-flex items-center gap-2 text-sm font-medium text-muted hover:text-foreground"
+          className="inline-flex items-center gap-2 text-sm font-medium text-muted transition-colors hover:text-foreground"
         >
           View all projects <ArrowRight size={16} />
         </Link>

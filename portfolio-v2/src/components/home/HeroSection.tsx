@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ProfileSidebar } from "./ProfileSidebar";
-import { heroBio, heroHeadline, heroRole, heroStats } from "@/content/hero";
+import { HeroTypewriter } from "./HeroTypewriter";
+import { heroBio, heroHeadline, heroStats } from "@/content/hero";
 
 export function HeroSection() {
   return (
@@ -16,7 +17,9 @@ export function HeroSection() {
 
           <p className="text-lg text-muted md:text-xl">
             Hello! I&apos;m{" "}
-            <span className="hero-role-highlight">{heroRole}</span>
+            <span className="hero-role-highlight">
+              <HeroTypewriter />
+            </span>
           </p>
 
           <h1 className="mt-4 max-w-2xl text-4xl font-semibold leading-[1.08] tracking-tight md:text-5xl lg:text-[3.25rem]">
@@ -28,10 +31,10 @@ export function HeroSection() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-muted">
+            <span className="rounded-full border border-foreground/10 bg-card px-3 py-1 text-xs text-muted">
               Bhavnagar, Gujarat
             </span>
-            <span className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-xs text-muted">
+            <span className="rounded-full border border-foreground/10 bg-card px-3 py-1 text-xs text-muted">
               Open to SDE internships
             </span>
           </div>
@@ -53,7 +56,7 @@ export function HeroSection() {
             </Link>
             <Link
               href="#about"
-              className="rounded-full border border-white/15 px-6 py-3 text-sm font-medium text-muted transition hover:border-white/30 hover:text-foreground"
+              className="rounded-full border border-foreground/15 px-6 py-3 text-sm font-medium text-muted transition-colors hover:border-foreground/30 hover:text-foreground"
             >
               More about me
             </Link>

@@ -17,10 +17,10 @@ export function CertificateThumbnail({
   if (cert.type === "pdf") {
     return (
       <div
-        className={`flex flex-col items-center justify-center gap-2 bg-white/[0.04] text-muted ${className}`}
+        className={`flex flex-col items-center justify-center gap-2 bg-card text-muted ${className}`}
       >
         <FileText size={40} strokeWidth={1.25} className="text-accent" />
-        <span className="rounded-full border border-white/10 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider">
+        <span className="rounded-full border border-foreground/10 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider">
           PDF · Click to view
         </span>
       </div>
@@ -50,7 +50,7 @@ export function CertificateLightboxContent({
       <iframe
         src={src}
         title={cert.name}
-        className="h-[85vh] w-full rounded-xl bg-white"
+        className="h-[85vh] w-full rounded-xl bg-background"
       />
     );
   }

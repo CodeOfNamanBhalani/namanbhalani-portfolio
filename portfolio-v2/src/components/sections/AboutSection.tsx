@@ -63,7 +63,7 @@ export function AboutSection() {
               href={siteConfig.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full border border-white/15 px-5 py-2.5 text-sm text-muted hover:text-foreground"
+              className="rounded-full border border-foreground/15 px-5 py-2.5 text-sm text-muted transition-colors hover:border-foreground/30 hover:text-foreground"
             >
               LinkedIn profile
             </a>

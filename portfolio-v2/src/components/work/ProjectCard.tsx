@@ -20,7 +20,7 @@ export function ProjectCard({ project, canHover, onPreview }: ProjectCardProps) 
   return (
     <article className="project-card relative flex flex-col overflow-hidden">
       <div
-        className="group relative aspect-[16/10] cursor-pointer overflow-hidden bg-white/[0.04]"
+        className="group relative aspect-[16/10] cursor-pointer overflow-hidden bg-card"
         onMouseEnter={(e) => {
           if (!canHover) return;
           onPreview?.({ data, el: e.currentTarget });
@@ -58,7 +58,7 @@ export function ProjectCard({ project, canHover, onPreview }: ProjectCardProps) 
           {project.tags.slice(0, 4).map((tag) => (
             <span
               key={tag}
-              className="rounded-full border border-white/10 px-2.5 py-0.5 text-xs text-muted"
+              className="rounded-full border border-foreground/10 px-2.5 py-0.5 text-xs text-muted"
             >
               {tag}
             </span>

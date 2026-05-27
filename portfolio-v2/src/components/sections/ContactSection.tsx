@@ -28,13 +28,13 @@ export function ContactSection() {
         <div className="space-y-4">
           {contacts.map(({ icon: Icon, label, value, href }) => (
             <div key={label} className="hero-stat-card flex items-center gap-4">
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/[0.04]">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-foreground/10 bg-card">
                 <Icon size={18} className="text-accent" />
               </span>
               <div>
                 <p className="text-xs text-muted">{label}</p>
                 {href ? (
-                  <a href={href} className="text-sm font-medium hover:text-accent">
+                  <a href={href} className="text-sm font-medium transition-colors hover:text-accent">
                     {value}
                   </a>
                 ) : (
@@ -51,7 +51,7 @@ export function ContactSection() {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-2 text-sm text-muted transition hover:border-white/25 hover:text-foreground"
+                className="flex items-center gap-2 rounded-full border border-foreground/10 bg-card px-4 py-2 text-sm text-muted transition-colors hover:border-foreground/25 hover:text-foreground"
               >
                 <Icon size={16} />
                 {label}
@@ -72,14 +72,14 @@ export function ContactSection() {
               name="subject"
               placeholder="Subject"
               required
-              className="w-full rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3 text-sm outline-none placeholder:text-muted focus:border-accent"
+              className="w-full rounded-lg border border-foreground/10 bg-card px-4 py-3 text-sm transition-colors placeholder:text-muted focus:border-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/25 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             />
             <textarea
               name="body"
               placeholder="Your message..."
               rows={5}
               required
-              className="w-full rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3 text-sm outline-none placeholder:text-muted focus:border-accent resize-none"
+              className="w-full resize-none rounded-lg border border-foreground/10 bg-card px-4 py-3 text-sm transition-colors placeholder:text-muted focus:border-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/25 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             />
             <button
               type="submit"

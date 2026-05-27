@@ -60,7 +60,7 @@ export function WorkSection() {
             <X size={20} />
           </button>
 
-          <div className="relative mx-auto h-full max-h-[90vh] max-w-5xl overflow-hidden rounded-2xl border border-white/10 bg-background">
+          <div className="relative mx-auto h-full max-h-[90vh] max-w-5xl overflow-hidden rounded-2xl border border-foreground/10 bg-background">
             <Image
               src={preview.image}
               alt={preview.title}
@@ -89,7 +89,7 @@ export function WorkSection() {
             <div className="flex flex-1 flex-col gap-2">
               <div className="flex items-start justify-between gap-2">
                 <h3 className="font-semibold">{project.title}</h3>
-                <span className="shrink-0 rounded-full border border-white/10 px-2 py-0.5 text-xs text-muted">
+                <span className="shrink-0 rounded-full border border-foreground/10 px-2 py-0.5 text-xs text-muted">
                   {project.year}
                 </span>
               </div>
@@ -102,7 +102,7 @@ export function WorkSection() {
                 {project.tags.slice(0, 3).map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-full border border-white/10 bg-white/[0.04] px-2 py-0.5 text-xs text-muted"
+                    className="rounded-full border border-foreground/10 bg-card px-2 py-0.5 text-xs text-muted"
                   >
                     {tag}
                   </span>
@@ -116,7 +116,7 @@ export function WorkSection() {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={(e) => e.stopPropagation()}
-                    className="inline-flex items-center gap-1 text-xs text-muted hover:text-foreground"
+                    className="inline-flex items-center gap-1 text-xs text-muted transition-colors hover:text-foreground"
                   >
                     GitHub <ArrowUpRight size={12} />
                   </a>
@@ -127,7 +127,7 @@ export function WorkSection() {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={(e) => e.stopPropagation()}
-                    className="inline-flex items-center gap-1 text-xs text-accent hover:opacity-80"
+                    className="inline-flex items-center gap-1 text-xs text-accent transition-opacity hover:opacity-80"
                   >
                     Live demo <ArrowUpRight size={12} />
                   </a>

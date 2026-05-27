@@ -21,7 +21,7 @@ export default function AboutPage() {
         description={aboutContent.intro}
       />
       <div className="grid gap-10 lg:grid-cols-[280px_1fr]">
-        <div className="relative mx-auto aspect-[3/4] w-full max-w-[280px] overflow-hidden rounded-2xl border border-white/10">
+        <div className="relative mx-auto aspect-[3/4] w-full max-w-[280px] overflow-hidden rounded-2xl border border-foreground/10">
           <Image
             src={siteConfig.profileImagePath}
             alt="Naman Bhalani"

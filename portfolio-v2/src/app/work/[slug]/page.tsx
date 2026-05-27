@@ -45,7 +45,7 @@ export default async function CaseStudyPage({ params }: Props) {
       <article className="mx-auto max-w-4xl px-6 py-16">
         <Link
           href="/work/"
-          className="inline-flex items-center gap-2 text-sm text-muted hover:text-foreground"
+          className="inline-flex items-center gap-2 text-sm text-muted transition-colors hover:text-foreground"
           data-cursor="hover"
         >
           <ArrowLeft size={16} /> All work
@@ -56,7 +56,7 @@ export default async function CaseStudyPage({ params }: Props) {
         <h1 className="mt-2 text-4xl font-semibold md:text-5xl">{project.title}</h1>
         <p className="mt-4 text-lg text-muted">{project.description}</p>
 
-        <div className="relative mt-10 aspect-video overflow-hidden rounded-2xl border border-white/10">
+        <div className="relative mt-10 aspect-video overflow-hidden rounded-2xl border border-foreground/10">
           <Image
             src={project.image}
             alt={project.title}
@@ -71,7 +71,7 @@ export default async function CaseStudyPage({ params }: Props) {
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="rounded-full border border-white/10 px-3 py-1 text-xs"
+              className="rounded-full border border-foreground/10 px-3 py-1 text-xs"
             >
               {tag}
             </span>

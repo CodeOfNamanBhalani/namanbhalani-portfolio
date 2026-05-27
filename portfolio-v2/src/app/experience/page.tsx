@@ -17,7 +17,7 @@ export default function ExperiencePage() {
         title="Industry training & internships"
         description="Hands-on roles across web, Flutter, AI/ML, and Java — online and offline."
       />
-      <div className="relative space-y-0 border-l border-white/10 pl-8">
+      <div className="relative space-y-0 border-l border-foreground/10 pl-8">
         {experiences.map((exp) => (
           <div key={exp.id} className="relative pb-12">
             <span className="absolute -left-[41px] top-1 flex h-5 w-5 items-center justify-center rounded-full border-2 border-foreground/50 bg-background">
@@ -36,7 +36,7 @@ export default function ExperiencePage() {
                 {exp.skills.map((s) => (
                   <span
                     key={s}
-                    className="rounded-full border border-white/10 px-2.5 py-0.5 text-xs"
+                    className="rounded-full border border-foreground/10 px-2.5 py-0.5 text-xs"
                   >
                     {s}
                   </span>

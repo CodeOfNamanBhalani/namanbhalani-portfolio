@@ -59,7 +59,7 @@ export function ProfileSidebar() {
         </p>
         <a
           href={`mailto:${siteConfig.email}`}
-          className="mt-3 inline-block text-sm text-muted hover:text-foreground"
+          className="mt-3 inline-block text-sm text-muted transition-colors hover:text-foreground"
         >
           {siteConfig.email}
         </a>
@@ -73,7 +73,7 @@ export function ProfileSidebar() {
             target={href.startsWith("http") ? "_blank" : undefined}
             rel="noopener noreferrer"
             aria-label={label}
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-muted transition hover:border-white/25 hover:text-foreground"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-foreground/10 bg-card text-muted transition-colors hover:border-foreground/25 hover:text-foreground"
           >
             <Icon size={18} />
           </a>
@@ -84,7 +84,7 @@ export function ProfileSidebar() {
         <a
           href={siteConfig.resumePath}
           download
-          className="flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-4 py-3 text-sm font-medium transition hover:bg-white/[0.08]"
+          className="flex items-center justify-center gap-2 rounded-full border border-foreground/15 bg-card px-4 py-3 text-sm font-medium transition-colors hover:bg-foreground/5"
         >
           <FileDown size={18} />
           View my CV

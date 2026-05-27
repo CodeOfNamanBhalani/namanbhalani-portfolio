@@ -20,7 +20,7 @@ export function CaseStudyGallery({
             key={src}
             type="button"
             onClick={() => setActive(i)}
-            className="relative aspect-video overflow-hidden rounded-xl border border-white/10"
+            className="relative aspect-video overflow-hidden rounded-xl border border-foreground/10 transition-colors hover:border-foreground/20"
           >
             <Image
               src={src}

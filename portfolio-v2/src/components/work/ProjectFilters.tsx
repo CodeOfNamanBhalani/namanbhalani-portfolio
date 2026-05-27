@@ -25,8 +25,8 @@ export function ProjectFilters({
             className={cn(
               "rounded-full border px-4 py-2 text-sm transition",
               active === cat.id
-                ? "border-white/30 bg-white/10 text-foreground"
-                : "border-white/10 text-muted hover:border-white/20 hover:text-foreground",
+                ? "border-foreground/30 bg-foreground/10 text-foreground"
+                : "border-foreground/10 text-muted hover:border-foreground/20 hover:text-foreground",
             )}
             data-cursor="hover"
           >
@@ -39,7 +39,7 @@ export function ProjectFilters({
         placeholder="Search projects…"
         value={search}
         onChange={(e) => onSearchChange(e.target.value)}
-        className="w-full rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm outline-none focus:border-foreground/40 sm:max-w-xs"
+        className="w-full rounded-full border border-foreground/10 bg-card px-4 py-2 text-sm transition-colors focus:border-foreground/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/25 focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:max-w-xs"
       />
     </div>
   );

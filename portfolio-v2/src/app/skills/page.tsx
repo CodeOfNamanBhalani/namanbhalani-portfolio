@@ -27,7 +27,7 @@ export default function SkillsPage() {
               {cat.skills.map((skill) => (
                 <span
                   key={skill}
-                  className="rounded-full border border-white/10 px-3 py-1 text-xs"
+                  className="rounded-full border border-foreground/10 px-3 py-1 text-xs"
                 >
                   {skill}
                 </span>

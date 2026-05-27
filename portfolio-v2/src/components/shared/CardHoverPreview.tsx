@@ -43,7 +43,7 @@ export function CardHoverPreview({ data, enabled = true }: CardHoverPreviewProps
       aria-hidden
     >
       <div className="flex h-full min-h-0 flex-col overflow-hidden rounded-2xl border border-accent/40 bg-background shadow-[0_20px_50px_rgba(0,0,0,0.65)]">
-        <div className="relative min-h-0 flex-[1.4] bg-white/[0.04]">
+        <div className="relative min-h-0 flex-[1.4] bg-card">
           <Image
             src={data.image}
             alt={data.title}
@@ -52,7 +52,7 @@ export function CardHoverPreview({ data, enabled = true }: CardHoverPreviewProps
             sizes="(max-width: 1024px) 50vw, 33vw"
           />
         </div>
-        <div className="shrink-0 border-t border-white/10 p-4">
+        <div className="shrink-0 border-t border-foreground/10 p-4">
           {data.subtitle && (
             <p className="font-mono text-xs uppercase tracking-wider text-accent">
               {data.subtitle}
@@ -69,7 +69,7 @@ export function CardHoverPreview({ data, enabled = true }: CardHoverPreviewProps
               {data.tags.slice(0, 4).map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-full border border-white/10 bg-white/[0.04] px-2 py-0.5 text-[10px] text-muted"
+                  className="rounded-full border border-foreground/10 bg-card px-2 py-0.5 text-[10px] text-muted"
                 >
                   {tag}
                 </span>

@@ -22,7 +22,7 @@ export default function ResumePage() {
       >
         Download PDF
       </a>
-      <div className="overflow-hidden rounded-2xl border border-white/10">
+      <div className="overflow-hidden rounded-2xl border border-foreground/10">
         <iframe
           src="/resume.pdf"
           title="Naman Bhalani Resume"

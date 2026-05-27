@@ -31,7 +31,7 @@ function GitHubIcon({ size = 16 }: { size?: number }) {
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-background/50">
+    <footer className="border-t border-foreground/10 bg-background/50">
       <div className="mx-auto max-w-7xl px-6 py-12">
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
           <div>
@@ -57,7 +57,7 @@ export function Footer() {
                   { href: "#contact", label: "Contact" },
                 ].map((link) => (
                   <li key={link.href}>
-                    <a href={link.href} className="hover:text-foreground">
+                    <a href={link.href} className="transition-colors hover:text-foreground">
                       {link.label}
                     </a>
                   </li>
@@ -74,7 +74,7 @@ export function Footer() {
                     href={siteConfig.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-muted hover:text-foreground"
+                    className="inline-flex items-center gap-2 text-muted transition-colors hover:text-foreground"
                   >
                     <LinkedInIcon size={16} />
                     LinkedIn
@@ -85,7 +85,7 @@ export function Footer() {
                     href={siteConfig.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-muted hover:text-foreground"
+                    className="inline-flex items-center gap-2 text-muted transition-colors hover:text-foreground"
                   >
                     <GitHubIcon size={16} />
                     GitHub
@@ -94,7 +94,7 @@ export function Footer() {
                 <li>
                   <a
                     href={`mailto:${siteConfig.email}`}
-                    className="inline-flex items-center gap-2 text-muted hover:text-foreground"
+                    className="inline-flex items-center gap-2 text-muted transition-colors hover:text-foreground"
                   >
                     <Mail size={16} />
                     Email
@@ -104,7 +104,7 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <p className="mt-10 border-t border-white/5 pt-6 text-center text-xs text-muted">
+        <p className="mt-10 border-t border-foreground/5 pt-6 text-center text-xs text-muted">
           © 2026 {siteConfig.fullName}. Built with Next.js & care.
         </p>
       </div>

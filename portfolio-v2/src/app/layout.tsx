@@ -4,6 +4,8 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Providers } from "@/components/providers";
 import { JsonLd } from "@/components/shared/JsonLd";
+import { SplashScreen } from "@/components/layout/SplashScreen";
+import { GalaxyBackground } from "@/components/layout/GalaxyBackground";
 import { createMetadata, personJsonLd } from "@/lib/seo";
 import "./globals.css";
 
@@ -46,6 +48,8 @@ export default function RootLayout({
           }}
         />
         <Providers>
+          <GalaxyBackground />
+          <SplashScreen />
           <Navbar />
           <main className="min-h-screen pt-20">{children}</main>
           <Footer />

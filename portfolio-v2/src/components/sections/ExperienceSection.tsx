@@ -10,7 +10,7 @@ export function ExperienceSection() {
       <h2 className="section-heading mb-12">Where I&apos;ve worked</h2>
 
       <div className="relative">
-        <div className="absolute left-4 top-0 h-full w-px bg-white/10 md:left-6" aria-hidden />
+        <div className="absolute left-4 top-0 h-full w-px bg-foreground/10 md:left-6" aria-hidden />
 
         <div className="space-y-8">
           {experiences.map((exp) => (
@@ -35,7 +35,7 @@ export function ExperienceSection() {
                   {exp.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="rounded-full border border-white/10 bg-white/[0.04] px-2.5 py-0.5 text-xs text-muted"
+                      className="rounded-full border border-foreground/10 bg-card px-2.5 py-0.5 text-xs text-muted"
                     >
                       {skill}
                     </span>

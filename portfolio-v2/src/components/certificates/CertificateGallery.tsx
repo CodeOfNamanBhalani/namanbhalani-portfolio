@@ -23,7 +23,7 @@ export function CertificateGallery() {
             key={cert.id}
             type="button"
             onClick={() => setSelected(cert)}
-            className="group relative overflow-hidden rounded-2xl border border-white/10 bg-card text-left hover:border-white/25"
+            className="group relative overflow-hidden rounded-2xl border border-foreground/10 bg-card text-left transition-colors hover:border-foreground/25"
           >
             {cert.type === "image" && (
               <CardHoverPreview
@@ -57,12 +57,12 @@ export function CertificateGallery() {
           onClick={() => setSelected(null)}
         >
           <div
-            className="max-h-[90vh] w-full max-w-4xl overflow-auto rounded-2xl border border-white/10 bg-background p-4"
+            className="max-h-[90vh] w-full max-w-4xl overflow-auto rounded-2xl border border-foreground/10 bg-background p-4"
             onClick={(e) => e.stopPropagation()}
           >
             <button
               type="button"
-              className="mb-4 rounded-full border border-white/10 px-3 py-1 text-sm"
+              className="mb-4 rounded-full border border-foreground/10 px-3 py-1 text-sm transition-colors hover:bg-foreground/5"
               onClick={() => setSelected(null)}
             >
               Close

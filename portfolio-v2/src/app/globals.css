@@ -9,6 +9,7 @@
   --accent-foreground: #0a0a0a;
   --accent-violet: #fafafa;
   --accent-cyan: #d4d4d4;
+  --galaxy-opacity: 1;
 }
 
 .light {
@@ -20,6 +21,12 @@
   --accent-foreground: #ffffff;
   --accent-violet: #0a0a0a;
   --accent-cyan: #525252;
+  --galaxy-opacity: 0.12;
+}
+
+.galaxy-background {
+  opacity: var(--galaxy-opacity);
+  transition: opacity 0.25s ease;
 }
 
 @theme inline {
@@ -43,6 +50,10 @@ html {
   scroll-behavior: smooth;
 }
 
+:where(section[id]) {
+  scroll-margin-top: 6rem;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -56,17 +67,134 @@ body {
   overflow-x: hidden;
 }
 
-/* Static background — zero JS, no animation */
-body::before {
-  content: "";
+/* Galaxy canvas sits at z-index 0; all page content above it */
+nav,
+main,
+footer,
+[role="status"],
+#__next_splash {
+  position: relative;
+  z-index: 1;
+}
+
+/* Splash screen — full-screen name typewriter */
+.splash-root {
   position: fixed;
   inset: 0;
-  z-index: -1;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--background);
+  opacity: 1;
+  transition: opacity 0.6s ease;
+  pointer-events: all;
+}
+
+.splash-root--hide {
+  opacity: 0;
   pointer-events: none;
-  background:
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(255, 255, 255, 0.07), transparent),
-    radial-gradient(ellipse 60% 40% at 100% 50%, rgba(255, 255, 255, 0.04), transparent),
-    var(--background);
+}
+
+.splash-inner {
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+.splash-typer {
+  --splash-chars: 13;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: bottom;
+  border-right: 3px solid var(--accent);
+  width: 0;
+  max-width: max-content;
+  animation-name: splash-reveal, splash-cursor-blink;
+  animation-timing-function: steps(var(--splash-chars), end), step-end;
+  animation-iteration-count: 1, infinite;
+  animation-fill-mode: forwards, none;
+  animation-delay: 0s, 0s;
+}
+
+.splash-typer-text {
+  display: inline-block;
+  font-family: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: clamp(1.75rem, 6vw, 3.5rem);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--foreground);
+  padding-right: 0.15em;
+}
+
+@keyframes splash-reveal {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes splash-cursor-blink {
+  0%,
+  49% {
+    border-color: var(--accent);
+  }
+  50%,
+  100% {
+    border-color: transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .splash-root {
+    transition: none;
+  }
+
+  .splash-typer {
+    width: 100%;
+    animation: none;
+    border-right-color: var(--accent);
+  }
+}
+
+/* Hero typewriter in hero section */
+.hero-typewriter {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.hero-typewriter-text {
+  min-height: 1.1em;
+  display: inline-block;
+  font-family: inherit;
+  font-weight: inherit;
+  color: inherit;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+.hero-typewriter-cursor {
+  width: 2px;
+  height: 1.05em;
+  background: currentColor;
+  border-radius: 999px;
+  animation: hero-cursor-blink 0.8s step-end infinite;
+  transform: translateY(0.06rem);
+}
+
+@keyframes hero-cursor-blink {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 ::selection {
@@ -75,27 +203,36 @@ body::before {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #ffffff 0%, #a3a3a3 100%);
+  background: linear-gradient(135deg, var(--foreground) 0%, var(--muted) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.light .gradient-text {
-  background: linear-gradient(135deg, #0a0a0a 0%, #525252 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.btn-primary,
+.btn-accent {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transform: translateY(0);
+  will-change: transform;
 }
 
 .btn-primary {
   background: var(--foreground);
   color: var(--background);
-  transition: opacity 0.15s ease;
+  transition: opacity 0.15s ease, transform 0.15s ease;
 }
 
 .btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
   opacity: 0.88;
+  transform: translateY(0);
 }
 
 .btn-accent {
@@ -106,6 +243,12 @@ body::before {
 
 .btn-accent:hover {
   opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.btn-accent:active {
+  opacity: 0.9;
+  transform: translateY(0);
 }
 
 /* Hero — reference-style layout (CSS only, no JS) */
@@ -187,13 +330,14 @@ body::before {
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: rgba(255, 255, 255, 0.02);
   padding: 1rem;
-  transition: border-color 0.15s ease;
+  transition: border-color 0.15s ease, transform 0.15s ease;
   isolation: isolate;
 }
 
 .project-card:hover {
   z-index: 20;
   border-color: rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
 }
 
 .hero-stat-card.group:hover {
@@ -216,4 +360,29 @@ main section {
 #hero {
   content-visibility: visible;
   contain-intrinsic-size: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-primary,
+  .btn-accent,
+  .project-card {
+    transition: none;
+  }
+
+  .btn-primary:hover,
+  .btn-primary:active,
+  .btn-accent:hover,
+  .btn-accent:active,
+  .project-card:hover {
+    transform: none;
+  }
+}
+
+:where(a, button, input, textarea, select, summary, [role="button"]) {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:where(a, button, summary, [role="button"]):focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--accent) 65%, transparent);
+  outline-offset: 3px;
 }

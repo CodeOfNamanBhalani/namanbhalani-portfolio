@@ -57,7 +57,7 @@ export function ContactForm() {
             id="name"
             name="name"
             required
-            className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm outline-none focus:border-white/30"
+            className="w-full rounded-xl border border-foreground/10 bg-card px-4 py-3 text-sm transition-colors focus:border-foreground/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/25 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           />
         </div>
         <div>
@@ -69,7 +69,7 @@ export function ContactForm() {
             name="email"
             type="email"
             required
-            className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm outline-none focus:border-white/30"
+            className="w-full rounded-xl border border-foreground/10 bg-card px-4 py-3 text-sm transition-colors focus:border-foreground/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/25 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           />
         </div>
         <div>
@@ -81,7 +81,7 @@ export function ContactForm() {
             name="message"
             required
             rows={5}
-            className="w-full resize-none rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm outline-none focus:border-white/30"
+            className="w-full resize-none rounded-xl border border-foreground/10 bg-card px-4 py-3 text-sm transition-colors focus:border-foreground/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/25 focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           />
         </div>
         <button

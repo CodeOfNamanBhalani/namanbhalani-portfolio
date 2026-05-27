@@ -21,7 +21,7 @@ export function CtaSection() {
           <a
             href="/resume.pdf"
             download
-            className="rounded-full border border-white/15 px-6 py-3 text-sm font-medium hover:bg-white/5"
+            className="rounded-full border border-foreground/15 px-6 py-3 text-sm font-medium transition-colors hover:bg-foreground/5"
           >
             Download resume
           </a>
