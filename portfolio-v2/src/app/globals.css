@@ -1,0 +1,219 @@
+@import "tailwindcss";
+
+:root {
+  --background: #050505;
+  --foreground: #fafafa;
+  --muted: #a3a3a3;
+  --card: rgba(255, 255, 255, 0.04);
+  --accent: #c8f542;
+  --accent-foreground: #0a0a0a;
+  --accent-violet: #fafafa;
+  --accent-cyan: #d4d4d4;
+}
+
+.light {
+  --background: #f5f5f5;
+  --foreground: #0a0a0a;
+  --muted: #525252;
+  --card: rgba(0, 0, 0, 0.03);
+  --accent: #3d7c0f;
+  --accent-foreground: #ffffff;
+  --accent-violet: #0a0a0a;
+  --accent-cyan: #525252;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-violet: var(--accent-violet);
+  --color-accent-cyan: var(--accent-cyan);
+  --color-card: var(--card);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Static background — zero JS, no animation */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(255, 255, 255, 0.07), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 50%, rgba(255, 255, 255, 0.04), transparent),
+    var(--background);
+}
+
+::selection {
+  background: color-mix(in srgb, var(--foreground) 25%, transparent);
+  color: var(--background);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #a3a3a3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.light .gradient-text {
+  background: linear-gradient(135deg, #0a0a0a 0%, #525252 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.btn-primary {
+  background: var(--foreground);
+  color: var(--background);
+  transition: opacity 0.15s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.88;
+}
+
+.btn-accent {
+  background: var(--accent);
+  color: var(--accent-foreground);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.btn-accent:hover {
+  opacity: 0.92;
+}
+
+/* Hero — reference-style layout (CSS only, no JS) */
+.hero-profile-card {
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 1.25rem;
+}
+
+.light .hero-profile-card {
+  border-color: rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.hero-eyebrow-dot {
+  display: inline-block;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 9999px;
+  background: var(--accent);
+}
+
+.hero-role-highlight {
+  display: inline-block;
+  border: 1px dashed var(--accent);
+  border-radius: 0.35rem;
+  padding: 0.1rem 0.45rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.hero-stat-card {
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 1.25rem 1rem;
+}
+
+.light .hero-stat-card {
+  border-color: rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Shared section spacing */
+.section-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80rem; /* 7xl */
+  padding: 5rem 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.light .section-container {
+  border-color: rgba(0, 0, 0, 0.06);
+}
+
+.section-heading {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+
+.project-card {
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+  padding: 1rem;
+  transition: border-color 0.15s ease;
+  isolation: isolate;
+}
+
+.project-card:hover {
+  z-index: 20;
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.hero-stat-card.group:hover {
+  z-index: 20;
+  position: relative;
+}
+
+.light .project-card {
+  border-color: rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Faster paint for long pages */
+main section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
+}
+
+/* Ensure the first (hero) section always lays out fully. */
+#hero {
+  content-visibility: visible;
+  contain-intrinsic-size: auto;
+}
